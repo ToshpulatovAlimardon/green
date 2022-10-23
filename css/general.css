@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+/* Topbar */
+#topbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1010;
+}
+
+    /* Logo */
+    #topbar .logo {
+        color: var(--color-green);
+        padding-left: 20px;
+        font-size: 1.25rem;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    /* Navbar */
+    #topbar .navbar {
+        display: flex;
+        align-items: center;
+    }
+    #topbar .navbar a {
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 10px 5px;
+        margin: 0 5px;
+        color: #000;
+        font-size: 0.875rem;
+        letter-spacing: .2em;
+        position: relative;
+    }
+    #topbar .navbar a::before {
+        content: "";
+        width: 0;
+        height: 3px;
+        background-color: var(--color-green);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: width .3s;
+    }
+    #topbar .navbar a:hover::before {
+        width: 100%;
+    }
+
+/* Header */
+#header {
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 94px;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header description */
+.header_description {
+    position: relative;
+}
+.header_description h1 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 10.625rem;
+    line-height: 3.75rem;
+    font-family: "Just Another Hand",cursive;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+    .header_description p {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: var(--color-light);
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+    .header_description p a {
+        color: var(--color-light);
+        border-bottom: 2px solid var(--color-border);
+        transition: border-color .3s;
+    }
+    .header_description p a:hover,
+    .header_description p a:focus {
+        border-color: #fff;
+    }
+
+/* Header karusel */
+.header_karusel span i {
+    padding: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+.header_karusel span:first-child i {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+.header_karusel span:last-child i {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
+.header_karusel span i:hover,
+.header_karusel span i:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+/* Product */
+#product {
+    padding: 64px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+    /* product item */
+    #product .product-item {
+        margin: 0 auto;
+        box-shadow: 0 6px 68px -6px rgb(0 0 0 / 9%);
+        background: #fff;
+        margin-bottom: 30px;
+        border-radius: 7px;
+        overflow: hidden;
+    }
+        #product .product-item img {
+            width: 360px;
+        }
+        #product .product_description {
+            width: 360px;
+            padding: 20px;
+        }
+            #product .product_description h2 {
+               font-size: 1.25rem;
+               margin-bottom: 10px;
+               font-weight: 400;
+               color: #000; 
+            }
+            #product .product_description p {
+                font-size: 1rem;
+                font-weight: 300;
+                color: var(--color-text);
+                line-height: 27.2px;
+                margin-bottom: 20.8px;
+            }
+            
