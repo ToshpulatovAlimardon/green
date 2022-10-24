@@ -38,6 +38,12 @@ a {
     margin: 0 auto;
 }
 
+/* selection */
+::selection {
+    background: #000;
+    color: #fff;
+}
+    
 /* btn */
 .btn {
     color: var(--color-light);
